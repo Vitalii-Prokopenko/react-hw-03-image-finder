@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { TbPhotoSearch } from "react-icons/tb";
 import css from 'components/searchbar/searchbar.module.css';
 
 class SearchBar extends Component {
@@ -9,8 +10,8 @@ class SearchBar extends Component {
   reset = () => {
     this.setState({
       tag: '',
-    })
-  }
+    });
+  };
 
   handleInputChange = event => {
     this.setState({
@@ -30,7 +31,7 @@ class SearchBar extends Component {
       <header className={css['searchbar']}>
         <form className={css['form']} onSubmit={this.handleSubmit}>
           <button type="submit" className={css['button']}>
-            <span className={css['button-label']}>Search</span>
+            <TbPhotoSearch />
           </button>
           <input
             className={css['input']}

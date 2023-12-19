@@ -7,24 +7,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 600px;
+    width: 400px;
     height: 60px;
 }
 
 .button {
-    width: 25%;
+    width: 30px;
     height: 30px;
     margin: 0;
     padding: 0;
-    border: 1px solid #EAD196;
+    border: none;
     background-color: #F3EDC8;
     cursor: pointer;
 }
 
 .input {
-    width: 70%;
+    width: 370px;
     height: 30px;
     margin: 0;
-    padding: 0;
-    border: 1px solid #EAD196;
+    padding: 0 5px;
+    border: none;
 }
