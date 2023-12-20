@@ -8,21 +8,29 @@ import Modal from 'components/modal/Modal';
 class App extends Component {
   state = {
     tag: '',
+    showModal: true,
   };
 
   tagSubmitHandler = data => {
-    const {tag} = data;
+    const { tag } = data;
     this.setState({
       tag: tag,
-    })
+    });
+  };
+
+  toggleModal = ({ showModal } = this.state) => {
+    this.setState({
+      showModal: !showModal,
+    });
   };
 
   render() {
+    const {showModal} = this.state;
     return (
       <>
         <SearchBar onSubmit={this.tagSubmitHandler} />
         <ImageGallery />
-        <Modal />
+        {showModal && <Modal onClose={this.toggleModal}/>}
         <Button />
         <Loader />
       </>
