@@ -26,10 +26,12 @@ class Modal extends Component {
   };
 
   render() {
+    const { clickedImage } = this.props;
+
     return createPortal(
       <div onClick={this.handleOverlayClick} className={css['overlay']}>
         <div className={css['modal']}>
-          <img src="" alt="" />
+          <img className={css['modal-img']} src={clickedImage.largeImageURL} alt={clickedImage.tags} />
         </div>
       </div>,
       modalRoot
